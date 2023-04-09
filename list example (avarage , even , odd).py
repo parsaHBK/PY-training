@@ -4,12 +4,13 @@ odd = []
 even = []
 for i in range (0, size ):
     print("number",i+1,":",end="")
-    a=int(input())
-    numbers.append(a)
-    if (a%2==0):
-        odd.append(a)
+    i=int(input())
+    numbers.append(i)
+    #secend way to catch parametrs for list is bottem its not good for knowing code
+    #   numbers += [i]
+    if (i%2==0):
+        odd.append(i)
     else:
-        even.append(a)
+        even.append(i)
 print("odd list:",odd[0:len(odd)])
 print("even list:",even[0:len(even)])
-    

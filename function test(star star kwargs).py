@@ -1,15 +1,9 @@
-def test (**kwargs)-> float:
-    """return a dictionary
-    and can input a kay word with value
-    like test(a=200,b=300)
-    test this function with example avrage
-    """
-    resault = 0
-    rep = 0
-    for key,value in kwargs.items():
-        resault+=value
-        rep+=1
-    return resault/rep
-    """SECEND WAY
-    return sum(kwargs.values())/len(kwargs.values())"""
-print(test(a=200,b=500))
+name=input("use ure name :")
+age= int(input("use ure age:"))
+s = "the name of this user is %s and he is age %d" %(name,age)
+print(s)
+#can use (%s(str,int,flaot),%d(int),%f(flaot))
+#SECEND WAY ANE NEW WAY WITH METHOD
+s = "the name of this user is {0} and he is age {1}".format(name,age)
+print(s)
+"""more help on this link(https://docs.python.org/3.11/library/string.html?highlight=string#module-string)"""

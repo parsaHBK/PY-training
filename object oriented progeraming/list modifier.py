@@ -8,9 +8,8 @@ class Listmodifier:
         the object will not change"""
         temp=[]
         for i in self.lst:
-            if not isinstance(i,int):
-                continue
-            temp+=[i]
+            if isinstance(i,int):
+                temp+=[i]
         return temp
     def count(self)-> int:
         """return a number
@@ -24,10 +23,9 @@ class Listmodifier:
         the object will not change"""
         temp=[]
         for i in self.lst:
-            if not isinstance(i,int):
-                continue
-            if i % 2 == 0:
-                temp +=[i]
+            if isinstance(i,int):
+                if i % 2 == 0:
+                    temp +=[i]
         return temp
     def change_member(self,index,member)-> list:
         """change the index of memebr on list
@@ -49,8 +47,9 @@ class Listmodifier:
         object will empety list"""
         self.lst=[]
         return self.lst
-a=Listmodifier([1,2,3,4,313,2])
+a=Listmodifier([1,2,3,4,313,2,"11","abc",2,5])
 print(a.change_member(4,5))
 print(a.count())
 print(a.remove_index(2))
-print(a.clear())
+print(a.eqaul_numbers())
+print(a.integer())
